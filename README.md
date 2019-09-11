@@ -19,5 +19,7 @@ Create a Custom Vision service that is trained to detect what type of BMW car is
 * Mini
 * Z4
 
+![Custom Vision](/module1/CreateCustomVisionProject.png)
+Format: ![Alt Text](url)
 
 Run and test an Azure Function locally where you can do a `GET` on a specific endpoint and pass in a product ID.  The product ID will return information on the product flavor.  For example if you did the following HTTP Request:
