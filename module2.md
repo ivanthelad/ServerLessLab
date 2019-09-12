@@ -12,18 +12,21 @@ This module will walk you through building, testing and publishing your first Az
 ## Pre-requisites 
 * A Azure Subcription 
 ## Challenge 
-Create an event driven Azure Serverless Function that procesess files stored on an azure storage account.  This function should receive the file and send it the trained Azure Cognitive service created in module0 and store the results in the cosmos db created in module1. As a first step you should c
+Create an event driven Azure Serverless Function that procesess files stored on an azure storage account.  This function should receive the file and print the output to the functions log output. You will need to create a Function APP and add a new function which is triggered by new files in blob storage. At a later step we will add cosmosdb and Cognitive service. You should be able to upload a new file to blob storage to test.
 
 
 
-
-expose the detect what type of car is in a image uploaded to the cloud. 
 
 ### Guided instructions
 
 <details><summary>Click to open</summary><p>
 
 ## Challenge 
+Theres 3 steps that need to be peformed 
+ * Create fucntion App 
+ * Create Blob Triggered Function 
+ * Test Function 
+
 
 ### Create Nodejs Function App
 
@@ -59,9 +62,7 @@ Now that we have a blob trigger we want to verify if it is correctly triggering 
 1. In a new browser tab.Select the storage account that was created with your function App. 
 1. Select "Blobs" 
 1. Create a new Container "images". This was the container/folder the function is triggered on ![CreateServerLess](/module2/createblob.png)
-
 1. upload any file to the container images . ![CreateServerLess](/module2/upload.png)
-
 1. naviagte back to the tab where the functions logs are open. you should see a new output which got triggered aftert we uploaded our new file. 
 ![CreateServerLess](/module2/logoutput.png)
 
@@ -74,7 +75,6 @@ Now we have a function app which can be triggered by a new file in blob storage 
  </p></details>
 
  ## Documentation
-
 * https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-storage-blob-triggered-function
 * https://docs.microsoft.com/en-us/azure/azure-functions/functions-bindings-storage-blob
 

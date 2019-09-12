@@ -4,16 +4,14 @@ A ServerLess Lab
 
 
 
-# Module 1 - CosmosDB 
+# Module 5 - Query data HTTP Trigger 
 
-For  this module we wil create a database to store the result of our custom vision API. This will enable us to query the results and classifications of the images being uploaded into our custom vision service. 
-
-
-This module will walk you through creation of your first cosmosdb. The database will server as the data backed for our application. 
+For this module we wil create a http based trigger to query our newly created classification database.
 
 
 ## Pre-requisites 
 * A Azure Subcription 
+* Module 0-4 are complete 
 ## Challenge 
 Create an cosmosDB to store our custom vision results 
 
