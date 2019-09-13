@@ -77,5 +77,7 @@ Now we have a function app which can be triggered by a new file in blob storage 
  ## Documentation
 * https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-storage-blob-triggered-function
 * https://docs.microsoft.com/en-us/azure/azure-functions/functions-bindings-storage-blob
+* https://docs.microsoft.com/en-us/azure/cosmos-db/serverless-computing-database
+* https://docs.microsoft.com/en-us/azure/azure-functions/functions-bindings-cosmosdb-v2#input---javascript-examples
 
 
