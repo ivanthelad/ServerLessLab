@@ -1,5 +1,5 @@
 
-# ServerlssLab
+# ServerLessLab
 A ServerLess Lab
 
 
@@ -34,4 +34,3 @@ Create an cosmosDB to store our custom vision results
 * [Azure Cosmos DB Overview](https://docs.microsoft.com/en-us/azure/cosmos-db/introduction)
 * [Azure Functions CosmosDB Binding (v2)](https://docs.microsoft.com/en-us/azure/azure-functions/functions-bindings-cosmosdb-v2)
 * [Azure CosmosDB Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-cosmosdb)
-* https://docs.microsoft.com/en-us/azure/cosmos-db/serverless-computing-database 
