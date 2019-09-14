@@ -42,8 +42,6 @@ GET http://{myFunctionEndpoint}/api/cars?type=mini
 
 <details><summary>Click to open</summary><p>
 
-1.	TODO. Add instructions 
-
 ### Create HTTP Trigger Function 
 1.	Click on “Resource Groups” and select your created rg
 1.	Click on your Function
@@ -94,7 +92,7 @@ module.exports = async function (context, req, inputDocument) {
  ´´´
  1. Now you should be able to test the function. Find the functions URL and add the tag parameter to the url 
     * https://customvisioncardetection.azurewebsites.net/api/cars2?tag=mini 
-    
+
 
 </p></details>
 
