@@ -100,4 +100,5 @@ module.exports = async function (context, req, inputDocument) {
 
 
 ## Documentation
-* [Azure Cosmos DB Overview](https://docs.microsoft.com/en-us/azure/cosmos-db/introduction)
+* [Http webhook ](https://docs.microsoft.com/en-us/azure/azure-functions/functions-bindings-http-webhook)
+* [Cosmosdb input binding ](https://docs.microsoft.com/en-us/azure/azure-functions/functions-bindings-cosmosdb-v2)
