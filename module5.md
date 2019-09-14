@@ -56,8 +56,6 @@ GET http://{myFunctionEndpoint}/api/cars?type=mini
 
 ### Create Cosmos Input Binding
 in this step we will bind the http trigger fetch input from  our cosmos db. This transparently will call to the database a fetch for data from the cosmos db and feed it as input to our function. 
-
- ![ddd](/module5/CreateHttpFunction.png)
 1.	Under your newly created function,"Cars", select "Integrate"
 1.  Create a new CosmosDB input binding. This binding will fetch data stored in cosmos db from the previous step 
     *  ![ddd](/module5/createbinding.png)
