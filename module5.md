@@ -65,7 +65,7 @@ in this step we will bind the http trigger fetch input from  our cosmos db. This
     * CosmosDB acccount connection: Configure the cosmosdb connection string. click "add new" to select the cosmos db from module3
     * SQl Query: This is the query that is used to fetch data stored in cosmosdb. Add "Select * from images i where i.tasg = {tag}"
     * Ensure that Document Parameter name is "inputDocument"
-    * ![ddd](/module5/CosmostinputBinding.png)
+    * ![ddd](/module5/Cosmostinputbinding.png)
 1. update the index.js script with the following code 
 ```javascript
  function CarClassification(id, image,classification, probability){
