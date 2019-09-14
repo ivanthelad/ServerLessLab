@@ -68,7 +68,8 @@ in this step we will bind the http trigger fetch input from  our cosmos db. This
     * ![ddd](/module5/Cosmostinputbinding.png)
 1. update the index.js script with the following code 
 ```javascript
- function CarClassification(id, image,classification, probability){
+
+function CarClassification(id, image,classification, probability){
     this.id = id;
     this.image= image; 
     this.classification = classification;
@@ -87,13 +88,16 @@ module.exports = async function (context, req, inputDocument) {
     };
     context.done(null,context.res);
 }; 
- ´´´
- 1. Now you should be able to test the function. Find the functions URL and add the tag parameter to the url 
+
+
+```
+
+1. Now you should be able to test the function. Find the functions URL and add the tag parameter to the url 
     * https://customvisioncardetection.azurewebsites.net/api/cars2?tag=mini 
 
 
 </p></details>
 
 
- ## Documentation
+## Documentation
 * [Azure Cosmos DB Overview](https://docs.microsoft.com/en-us/azure/cosmos-db/introduction)
