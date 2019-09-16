@@ -6,21 +6,21 @@ A ServerLess Lab
 
 # Module 5 - Query data HTTP Trigger 
 
-For this module we wil create a http based trigger to query our newly created classification database.
+For this module we will create a http based trigger to query our newly created classification database.
 
 
 ## Pre-requisites 
-* A Azure Subcription 
+* An Azure Subcription 
 * Module 0-4 are complete 
 ## Challenge 
-In this module you need to create a nodejs Azure Function which is trigger with a http call. The function calls the cosmos db and returns a json object with following. The function will 
+In this module you need to create a new nodejs Azure Function which is trigger with a http call. The function calls the cosmos db and returns a json object with following. The function will 
 * Allow you to perform  GET on a specific endpoint and pass in a "tag" name as a paramerer . 
 * The 'tag' name will return a list of cars that have been classified with that tag. 
 *  For example if you did the following HTTP Request:
 ```
-GET http://{myFunctionEndpoint}/api/cars?type=mini
+GET http://{myFunctionEndpoint}/api/cars?tag=mini
 ```
-* the Api will return 
+* the API will return 
 ```json
 [
   {
@@ -48,14 +48,14 @@ GET http://{myFunctionEndpoint}/api/cars?type=mini
 1.	Click on “+ New Function” button
 1.	Select "HTTP Trigger"
 1.  A dialog appears 
-    * Set name of fucntion to "cars". this will be also the endpoint you access your https service from 
-    * set Authorization level to "Anonymous"
+    * Set name of function to "cars". This will be also the endpoint you access your https service on 
+    * Set Authorization level to "Anonymous"
     * ![ddd](/module5/CreateHttpFunction.png)
-1. A default http function will be created. You can test  this functionality by calling the function url which can be found under in the top of the fucntion
-![ddd](/module5/testfucntion.png) 
+1. A default http function will be created. You can test this functionality by calling the function url which can be found under  the top of the function
+![ddd](/module5/testfunction.png) 
 
-### Create Cosmos Input Binding
-in this step we will bind the http trigger fetch input from  our cosmos db. This transparently will call to the database a fetch for data from the cosmos db and feed it as input to our function. 
+### Create Cosmos DB Input Binding
+In this step we will bind the http trigger to fetch input from our cosmos db. This transparently will call to the database for data from the cosmos db and feed it as input to our function. 
 1.	Under your newly created function,"Cars", select "Integrate"
 1.  Create a new CosmosDB input binding. This binding will fetch data stored in cosmos db from the previous step 
     *  ![ddd](/module5/createbinding.png)
@@ -63,9 +63,9 @@ in this step we will bind the http trigger fetch input from  our cosmos db. This
     * Collection name: This is the collection name you configured in [Step 9 in module 3](/module3.md)
     * Database Name: This is the database name you configured in [Step 8 in module 3](/module3.md)
     * CosmosDB acccount connection: Configure the cosmosdb connection string. click "add new" to select the cosmos db from module3
-    * SQl Query: This is the query that is used to fetch data stored in cosmosdb. Add "Select * from images i where i.tasg = {tag}"
+    * SQl Query: This is the query that is used to fetch data stored in cosmosdb. Add "Select * from images i where i.tag = {tag}"
     * Ensure that Document Parameter name is "inputDocument"
-    * ![ddd](/module5/Cosmostinputbinding.png)
+    * ![ddd](/module5/Cosmosinputbinding.png)
 1. update the index.js script with the following code 
 ```javascript
 
