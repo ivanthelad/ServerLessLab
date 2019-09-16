@@ -21,11 +21,13 @@ Create a Cosmos DB to store our custom vision results
 
 <details><summary>Click to open</summary><p>
 
-1.	"Create a resource" again
-1.	Type "Cosmos DB", click Create
+1. Open the Azure Portal at https://portal.azure.com
+1.	Click on "Create a resource" in the upper left corner
+1.	Type "Azure Cosmos DB", select the first suggestion and then click "Create"
 1.	Select the resource group that you created in step module0 where your CognitiveServices are running 
 1.	Type a unique account name
-1.	Location: West Europe. Leave the rest as default and hit Review+Create. Then create
+1.	Location: West Europe. Leave the rest as default
+1. Hit Review+Create. Then "Create" on the next page
  ![CreateServerLess](/module1/createCosmosDB.png)
 </p></details>
 
