@@ -57,16 +57,16 @@ GET http://{myFunctionEndpoint}/api/cars?tag=mini
 ### Create Cosmos DB Input Binding
 In this step we will bind the http trigger to fetch input from our cosmos db. This transparently will call to the database for data from the cosmos db and feed it as input to our function. 
 1.	Under your newly created function,"Cars", select "Integrate"
-1.  Create a new CosmosDB input binding. This binding will fetch data stored in cosmos db from the previous step 
+1.  Create a new CosmosDB input binding by clicking on "new Input" and selecting "Azure Cosmos DB". This binding will fetch data stored in cosmos db from the previous step 
     *  ![ddd](/module5/createbinding.png)
 1. Configure the following input bindings settings 
-    * Collection name: This is the collection name you configured in [Step 9 in module 3](/module3.md)
-    * Database Name: This is the database name you configured in [Step 8 in module 3](/module3.md)
-    * CosmosDB acccount connection: Configure the cosmosdb connection string. click "add new" to select the cosmos db from module3
-    * SQl Query: This is the query that is used to fetch data stored in cosmosdb. Add "Select * from images i where i.tag = {tag}"
+    * Collection name: This is the collection name you configured in [Step 9 in module 3](/module3.md) ("Images")
+    * Database Name: This is the database name you configured in [Step 8 in module 3](/module3.md) ("ServerlessTutorial")
+    * CosmosDB acccount connection: Configure the cosmosdb connection string. If it is not already pre-selected for you, click "add new" to select the cosmos db from module3.
+    * SQL Query: This is the query that is used to fetch data stored in cosmosdb. Add "Select * from images i where i.tag = {tag}"
     * Ensure that Document Parameter name is "inputDocument"
     * ![ddd](/module5/Cosmosinputbinding.png)
-1. update the index.js script with the following code 
+1. Update the index.js script with the following code 
 ```javascript
 
 function CarClassification(id, image,classification, probability){
@@ -92,8 +92,11 @@ module.exports = async function (context, req, inputDocument) {
 
 ```
 
-1. Now you should be able to test the function. Find the functions URL and add the tag parameter to the url 
-    * https://customvisioncardetection.azurewebsites.net/api/cars2?tag=mini 
+Now you should be able to test the function. 
+
+1. Copy the functions URL and add the tag parameter to the url. You can copy the URL from the link "Get function URL" above the code view of your function 
+    * It should look similar to this: https://customvisioncardetection.azurewebsites.net/api/cars2?tag=Mini 
+    * Make sure you write the tag, e.g. "Mini" exactly as you defined it in the custom vision service. It is case-sensitve.
 
 
 </p></details>
