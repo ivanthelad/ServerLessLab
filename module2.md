@@ -10,7 +10,7 @@ As part of our Car detection Service we need a mechanism to import easily our im
 
 This module will walk you through building, testing and publishing your first Azure Function in the clou. The Azure Function will be the serverless API to react the data on newly uploaded images 
 ## Pre-requisites 
-* A Azure Subcription 
+* An Azure Subcription 
 ## Challenge 
 Create an event driven Azure Serverless Function that procesess files stored on an azure storage account.  This function should receive the file and print the output to the functions log output. You will need to create a Function APP and add a new function which is triggered by new files in blob storage. At a later step we will add cosmosdb and Cognitive service. You should be able to upload a new file to blob storage to test.
 
@@ -41,36 +41,36 @@ Theres 3 steps that need to be peformed
  * ![CreateServerLess](/module2/severlesscreate.png)
 
 ### Create Blob Trigger Function 
-1.	Click on “Resource Groups” and select your created rg
+1.	Click on "Resource Groups" and select your created rg
 1.	Click on your Function
-1.	Click on “+ New Function” button
+1.	Click on "+ New Function" button
 1.	In-portal
 1.	More templates… Finish and view templates
 1.	Azurce Blob Storage trigger
 1.	Click on Install (for the extension). This can take up to 2 minutes. Wait and don’t leave the screen!
 1.	Once done, click continue
-1.	Pick a name. E.g. BmwModelClassification
-1.	Change the path to “images/{name}”
+1.	Pick a name. E.g. CarModelClassification
+1.	Change the path to "images/{name}"
 1.	Leave the rest and click Create
  * ![CreateServerLess](/module2/StorageTrigger.png)
 
 ### Test Blob Trigger
-Now that we have a blob trigger we want to verify if it is correctly triggering on new files under the storage account. By deault the the Blob Trigger will listen on the default storage you functions.  To Test this we need to create a new Blob container called "images"(the path we chose to listen on in the las step) and upload any file to the new blob container
-1. Under the "Resource Group" blade select the Rg you created  
-1. Once uploaded navigate to your function app and select the function your created "BmwModelClassification" 
+Now that we have a blob trigger we want to verify if it is correctly triggering on new files under the storage account. By default the the Blob Trigger will listen on the default storage of your Function. To test this we need to create a new Blob container called "images"(the path we chose to listen on in the las step) and upload any file to the new blob container
+1. Under the "Resource Group" blade select the group you created  
+1. Once uploaded navigate to your function app and select the function your created "CarModelClassification" 
 1. Open the logs tab. Keep this open as this will output logs when we upload a new file 
 1. In a new browser tab.Select the storage account that was created with your function App. 
 1. Select "Blobs" 
-1. Create a new Container "images". This was the container/folder the function is triggered on ![CreateServerLess](/module2/createblob.png)
-1. upload any file to the container images . ![CreateServerLess](/module2/upload.png)
-1. naviagte back to the tab where the functions logs are open. you should see a new output which got triggered aftert we uploaded our new file. 
+1. Create a new container named "images". This is the container/folder the function is triggered on ![CreateServerLess](/module2/createblob.png)
+1. Upload any file to the container images. ![CreateServerLess](/module2/upload.png)
+1. Naviagte back to the tab where the functions logs are open. You should see a new output which got triggered after we uploaded our new file. 
 ![CreateServerLess](/module2/logoutput.png)
 
 
 
 
 
-Now we have a function app which can be triggered by a new file in blob storage under the path images/*. we have not specified where exactly this is. But we have not connected the 
+Now we have a Function app which can be triggered by a new file in blob storage under the path images/* . We have not specified where exactly this is. But we have not connected the Function with the Blob storage account.
 
  </p></details>
 
