@@ -24,27 +24,26 @@ Create and train a  Custom Vision service that is able to detect what type of ca
 
 Create Cognitive Service 
 ### Create Project and upload training Images 
-1.	Unzip the file. It contains Four  folders (one for each model)
-1.	Go to customvision.ai.  please accept the terms and allow customvision to access your subscription 
+1.	Unzip the file. It contains 4 folders (one for each model)
+1.	Go to https://customvision.ai. Please accept the terms and allow Azure Custom Vision to access your Azure subscription 
     * You should not have any projects in your account. 
 1.	To create your first project, select New Project. The Create new project dialog box will appear.
-    *  Before creating a Project you will need to create a Cognitive Services Resource.  Click "Create new "
+    * Before creating a Project you will need to create a Cognitive Services Resource. Click "Create new "
     * Enter a name and a description for the project. 
-    * Then select a Resource Group. If your signed-in account is associated with an Azure account, will display all of your Azure subscriptions and Resource Groups that include a Custom Vision Service Resource.the Resource Group dropdown 
+    * Then select a Resource Group. If your signed-in account is associated with an Azure account, it will display all of your Azure subscriptions and Resource Groups that include a Custom Vision Service Resource.the Resource Group dropdown 
     *  ![CreateCognitiveService](/module0/Step2CreateCognitiveService.png)
 1. After the Cognitive service is created then create the Project with the following config 
     * ***Project Types*** = "Classification"
     * ***Classification Type*** = "Multiclass (Single tag per image)"
-    * ***Domains*** = "Domains"
+    * ***Domains*** = "General"
     * ![CreateCognitiveService](/module0/CreateCustomVisionProject.png)
 1. In the newly created project click on Add Images
     * ![CreateCognitiveService](/module0/addimages.png)
-1.	Select all images from one of the folder, e.g. "5er"
+1.	Select all images from one of the folder, e.g. "X5"
 1.	Under My Tags enter e.g. X5 and hit enter. Then click on Upload.
-    *  ***Ensure you hit Return as other wise the Tag is not added***
+    *  ***Ensure you hit Enter/Return before clicking on Upload as other wise the Tag is not added***
     * ![CreateCognitiveService](/module0/imagetagging.png)
 1.	Repeat the step for all three models
-1.	
 
 ### Train Model 
 1. Once uploaded, click on the green Train button	
