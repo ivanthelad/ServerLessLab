@@ -1,13 +1,3 @@
-<div>
-img[src~="thumbnail"] {
-   width:150px;
-   height:100px;
-}
-img[src~="bordered"] {
-   border: 1px solid black;
-}
-</div>
-
 # ServerLessLab
 A ServerLess Lab
 
