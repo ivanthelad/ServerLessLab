@@ -44,24 +44,27 @@ Theres 3 steps that need to be peformed
 1.	Click on "Resource Groups" and select your created rg
 1.	Click on your Function
 1.	Click on "+ New Function" button
-1.	In-portal
-1.	More templates… Finish and view templates
-1.	Azurce Blob Storage trigger
-1.	Click on Install (for the extension). This can take up to 2 minutes. Wait and don’t leave the screen!
+1.	For Development environment select: "In-portal" and click on continue
+1.	Select "More templates…", then "Finish and view templates"
+1.	Select "Azure Blob Storage trigger"
+1.	On the popup screen click on "Install" (for the extension). This can take up to 2 minutes. Wait and don’t leave the screen!
 1.	Once done, click continue
 1.	Pick a name. E.g. CarModelClassification
 1.	Change the path to "images/{name}"
 1.	Leave the rest and click Create
- * ![CreateServerLess](/module2/StorageTrigger.png)
+  ![CreateServerLess](/module2/StorageTrigger.png)
 
 ### Test Blob Trigger
 Now that we have a blob trigger we want to verify if it is correctly triggering on new files under the storage account. By default the the Blob Trigger will listen on the default storage of your Function. To test this we need to create a new Blob container called "images"(the path we chose to listen on in the las step) and upload any file to the new blob container
+1. Once the deployment of the Function App from the previous step is finshed (you will get a notification in the portal or you can also click on the little bell icon on the top of the page), continue:
 1. Under the "Resource Group" blade select the group you created  
-1. Once uploaded navigate to your function app and select the function your created "CarModelClassification" 
+1. Once uploaded navigate to your function app and select the function you created, e.g. "CarModelClassification" 
 1. Open the logs tab. Keep this open as this will output logs when we upload a new file 
-1. In a new browser tab.Select the storage account that was created with your function App. 
+1. In a new browser tab: Open the Azure Portal again (https://portal.azure.com) and click on Storage accounts on the left hand side.
+1. Select the storage account that was created with your function App. (The name is similar to the name of your Function app)
 1. Select "Blobs" 
 1. Create a new container named "images". This is the container/folder the function is triggered on ![CreateServerLess](/module2/createblob.png)
+1. Click on the name of the newly created container.
 1. Upload any file to the container images. ![CreateServerLess](/module2/upload.png)
 1. Naviagte back to the tab where the functions logs are open. You should see a new output which got triggered after we uploaded our new file. 
 ![CreateServerLess](/module2/logoutput.png)
